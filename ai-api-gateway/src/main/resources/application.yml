@@ -1,0 +1,16 @@
+server:
+  port: 7001 # Like "TOOL"
+spring:
+  application:
+    name: ai-gateway
+
+formentor:
+  ai:
+    services:
+      # Service "booking" to book a hotel
+      - "http://localhost:8080/v3/api-docs.yaml"
+      # Service "product" to get hotels
+      - "http://localhost:8082/v3/api-docs.yaml"
+    ollama:
+      host: "http://localhost:11434"
+      model: "llama3.1:8b"
